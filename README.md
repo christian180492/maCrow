@@ -2,6 +2,7 @@
 A macro recorder for windows automation
 
 - Blog [https://corvus-ikshana.hashnode.dev/how-to-make-a-macro-recorder-in-python]
+- https://twitter.com/i/status/1732021461446259091
 
 # Mouse Recorder/Replayer
 
