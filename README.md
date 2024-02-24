@@ -1,6 +1,8 @@
 # maCrow
 A macro recorder for windows automation
 
+- Blog [https://corvus-ikshana.hashnode.dev/how-to-make-a-macro-recorder-in-python]
+
 # Mouse Recorder/Replayer
 
 This Python script allows you to record and replay mouse movements, clicks, and keyboard inputs. It uses the pynput library for mouse events and the keyboard library for keyboard events. The recorded actions are saved in a JSON file, which can be later replayed to simulate the recorded input.
