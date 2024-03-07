@@ -59,3 +59,8 @@ file_list.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
 scrollbar.config(command=file_list.yview)
 
 root.mainloop()
+
+# TODO: El problema es que para cancelar la grabación hay que hacer focus en la terminal desde la que se ejecuta el script y precionar CNTRL + C y este comando mismo, también se graba.
+# El hecho de que el comando CNTRL + C se grabe también, es un problema, ya que si se reproduce la grabación, el script se detendrá.
+# Mi propuesta es que dentro del archivo coordinador_acciones.py tengamos un valor buleano que indique si se está grabando o no. Si se presiona grabar, estará en true y si se preciona play, estará en false.
+# Además de eso poner un botón de stop que sea el que cancele la grabación cuando se está grabando y que cuando se esté reproduciendo, no haga nada ya que el valor buleano estará en false.
