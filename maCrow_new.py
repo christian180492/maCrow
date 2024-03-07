@@ -8,6 +8,7 @@ import keyboard
 import ctypes
 import tkinter as tk
 from tkinter import Canvas, Label
+import os
 
 # Get screen resolution
 screen_width, screen_height = pyautogui.size()
@@ -46,7 +47,7 @@ def count_down_animation_config(mode):
     countdown_animation(root)
     root.withdraw()  # Hide the root window
 
-def record(filename):
+def record(filename, should_continue):
     count_down_animation_config("record")
     actions = []
     start_time = time.time()  # Initialize start_time at the beginning of recording
@@ -108,9 +109,9 @@ def record(filename):
 
     print("Recording started. Move the mouse around, perform actions, and type on the keyboard. Press Ctrl + C to stop.")
     try:
-        while True:
+        while should_continue():
             time.sleep(0.05)  # Adjusted sleep time for smoother recordings
-    except KeyboardInterrupt:
+    finally:
         print("Recording stopped.")
         listener.stop()
         keyboard.unhook_all()
